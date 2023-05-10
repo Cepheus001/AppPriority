@@ -12,5 +12,5 @@ if ($Priority.ToLower() -eq "high") {
     Get-WmiObject Win32_process -filter "name = '$Application' "| foreach-object { $_.SetPriority(32) }
     Write-host($Application + " has been set to the lowest priority level")
 } else {
-    Write-host("You must specify the process or service with it's extension and choose of the the following priority options: high, normal, low, lowest")
+    Write-host("You must specify the process or service with it's extension and choose one of the the following priority options: high, normal, low, lowest")
 }
